@@ -1,6 +1,6 @@
 spring:
   application:
-    name: poc-1-kafka-cadastro-pedido-ms-springboot
+    name: poc-1-kafka-producer-ms-springboot
 
 server:
   port: 8081

@@ -1,6 +1,6 @@
-package br.com.poc_1_kafka_cadastro_pedido_ms_springboot.publisher;
+package br.com.poc_1_kafka_cadastro_pedido_ms_springboot.producer;
 
-import br.com.poc_1_kafka_cadastro_pedido_ms_springboot.dto.CadastroPedidoRequestDTO;
+import br.com.poc_1_kafka_cadastro_pedido_ms_springboot.dto.ProducerDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class PedidoPublisher {
+public class KafkaProducer {
 
     private final ObjectMapper objectMapper;
     private final KafkaTemplate<String, String> kafkaTemplate;
@@ -21,13 +21,13 @@ public class PedidoPublisher {
     private String topico;
 
     public void publicar(
-            CadastroPedidoRequestDTO cadastroPedidoRequestDTO
+            ProducerDTO producerDTO
     ) {
 
         log.info("Publicando pedido.");
 
         try {
-            var json = objectMapper.writeValueAsString(cadastroPedidoRequestDTO);
+            var json = objectMapper.writeValueAsString(producerDTO);
             kafkaTemplate.send(topico, "pedidos", json);
         } catch (JsonProcessingException jsonProcessingException) {
             log.error("Erro ao processar o json do pedido criado", jsonProcessingException);

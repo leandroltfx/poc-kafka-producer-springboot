@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com</groupId>
-	<artifactId>poc-1-kafka-cadastro-pedido-ms-springboot</artifactId>
+	<artifactId>poc-1-kafka-producer-ms-springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>

@@ -1,10 +1,9 @@
 package br.com.poc_1_kafka_cadastro_pedido_ms_springboot.controller;
 
 import br.com.poc_1_kafka_cadastro_pedido_ms_springboot.dto.ApiResponseDTO;
-import br.com.poc_1_kafka_cadastro_pedido_ms_springboot.dto.CadastroPedidoRequestDTO;
-import br.com.poc_1_kafka_cadastro_pedido_ms_springboot.useCase.CadastroPedidoUseCase;
+import br.com.poc_1_kafka_cadastro_pedido_ms_springboot.dto.ProducerDTO;
+import br.com.poc_1_kafka_cadastro_pedido_ms_springboot.useCase.ProducerUseCase;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,17 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/pedidos")
 @RequiredArgsConstructor
-@Slf4j
-public class PedidoController {
+public class ProducerController {
 
-    private final CadastroPedidoUseCase cadastroPedidoUseCase;
+    private final ProducerUseCase producerUseCase;
 
     @PostMapping
-    public ResponseEntity<ApiResponseDTO> cadastrarPedido(
-            @RequestBody CadastroPedidoRequestDTO cadastroPedidoRequestDTO
+    public ResponseEntity<ApiResponseDTO> producer(
+            @RequestBody ProducerDTO producerDTO
     ) {
-        log.info("Requisição para cadastro de pedido recebida.");
-        cadastroPedidoUseCase.execute(cadastroPedidoRequestDTO);
+        producerUseCase.execute(producerDTO);
         ApiResponseDTO apiResponseDTO = new ApiResponseDTO("Pedido cadastrado com sucesso!");
         return ResponseEntity
                 .status(HttpStatus.CREATED)
