@@ -1,4 +1,4 @@
-package br.com.poc_1_kafka_producer_ms_springboot.config;
+package br.com.poc_kafka_producer_springboot.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

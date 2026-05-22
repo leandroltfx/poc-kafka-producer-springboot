@@ -1,8 +1,8 @@
-package br.com.poc_1_kafka_producer_ms_springboot.controller;
+package br.com.poc_kafka_producer_springboot.controller;
 
-import br.com.poc_1_kafka_producer_ms_springboot.dto.ApiResponseDTO;
-import br.com.poc_1_kafka_producer_ms_springboot.dto.ProducerDTO;
-import br.com.poc_1_kafka_producer_ms_springboot.useCase.ProducerUseCase;
+import br.com.poc_kafka_producer_springboot.dto.ApiResponseDTO;
+import br.com.poc_kafka_producer_springboot.dto.ProducerDTO;
+import br.com.poc_kafka_producer_springboot.useCase.ProducerUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

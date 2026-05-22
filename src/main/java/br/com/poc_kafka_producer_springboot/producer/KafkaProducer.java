@@ -1,6 +1,6 @@
-package br.com.poc_1_kafka_producer_ms_springboot.producer;
+package br.com.poc_kafka_producer_springboot.producer;
 
-import br.com.poc_1_kafka_producer_ms_springboot.dto.ProducerDTO;
+import br.com.poc_kafka_producer_springboot.dto.ProducerDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package br.com.poc_1_kafka_producer_ms_springboot.config;
+package br.com.poc_kafka_producer_springboot.config;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

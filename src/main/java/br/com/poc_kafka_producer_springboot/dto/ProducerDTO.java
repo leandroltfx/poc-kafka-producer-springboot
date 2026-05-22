@@ -1,4 +1,4 @@
-package br.com.poc_1_kafka_producer_ms_springboot.dto;
+package br.com.poc_kafka_producer_springboot.dto;
 
 public record ProducerDTO(
         String message
